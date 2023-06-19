@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <link rel="stylesheet" href="CSS/FORM.CSS">
+</head>
+
+<body>
+    <h2> HTML5 form DEMO</h2>
+    <hr>
+    <h3> Sign in </h3>
+    <!-- khai báo mẫu biểu nhập liệu-->
+    <form action="d05_table_css.html" method="post">
+        <div>
+            <label for="">username</label>
+            <input type="text" name="uid" id="uid" required value="attach">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" name="pass" id="pass" required placeholder="nhap mat khau" pattern="[0-9]{3,5}"
+                title="nhap tu 3 den 5 so">
+        </div>
+        
+        <div>
+            <label for="">email</label>
+            <input type="email" name="mail" id="mail" required>
+        </div>
+        <div>
+            <label for="">remember me</label>
+            <input type="checkbox" name="rem" id="rem" checked>
+        </div>
+        <div>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+            <a href=""></a>
+        
+        </div>
+        <div>
+            <a href="">Sign here</a>
+        </div>
+    </form>
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        form{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action=""  name="Register" id="Register" >
+        <div>
+                <nav>
+                    <a href="">Bu</a>
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Faetures</a>
+                    <a href="">Product</a>
+                    <a href="">Reviews</a>
+                    <a href="">Faq</a>
+                    <a href="register.html">Register</a>
+                </nav>
+        </div>
+        <div>
+            <h2 style="text-align: center;"> Register Product</h2>
+        </div>
+        <div>
+            <input type="text" value="Nguyen Ho Anh Ngoc" required>
+        </div>
+        <div>
+            <input type="text" name="pass" id="pass" value="123456" pattern="[a-zA-Z0-9]{7-100}" required>
+        </div>
+        <div>
+            <input type="text" name="pass2" id="pass2" value="123456" pattern="[a-zA-Z0-9]{7-100}" required>
+        </div>
+        <div>
+            <input type="text" value="Nguyen" id="Fname" name="Fname" required>
+        </div>
+        <div>
+            <input type="text" value="Ngoc" id="Lname" name="Lname" required>
+        </div>
+        <div>
+            <input type="email" value="anhngoc@gmail.com" >
+        </div>
+        <div>
+            <input type="text" value="0123456 789" pattern="[0-9]{10}">
+        </div>
+        <div>
+            <input type="text" value=" Tell us about Product" >
+        </div>
+        <div>
+            <label >choose color</label>
+            <input type="radio" value="Black" > Black
+            <input type="radio"  value="Pink"> Pink
+            <input type="radio"  value="Red"checked> Red
+        </div>
+        <div>
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </div>
+        <div>
+            Copy  &commat; 2021 .All Rights Reserved By Buten
+        </div>
+    </form>
+</body>
+<script>
+    document.getElementById("Register").onsubmit = function (e) {
+        e.preventDefault();
+
+        let a = [];
+        let pass1 = document.getElementById("pass").value;
+        let pass2 = document.getElementById("pass2").value;
+
+        if(pass1!==pass2){
+            alert(" >> password and retype password do not match ! !");
+            document.getElementById("pass2").focus();
+            return false;            
+        }
+        let password = document.getElementById('pass');
+            if(password.type == 'text'){
+                password.type = 'password';
+            }else{
+                password.type = 'text';
+            }
+        let password1 = document.getElementById('pass2');
+            if(password.type == 'text'){
+                password.type = 'password';
+            }else{
+                password.type = 'text';
+            }   
+        a.push(` Thank you for your register our Product!`);
+        alert(a.join("\n"));
+    }
+</script>

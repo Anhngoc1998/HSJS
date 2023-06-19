@@ -1,0 +1,34 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer{
+    margin-top: 20px;
+    border-top: inset green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: aliceblue;
+    text-align: center;
+
+}
+.logo{
+    width: 10%;
+    float: left;
+}
+.blink{
+    display: inline;
+    animation: blinker 1.5s linear infinite;
+    color: brown;
+    font-family: sans-serif;
+    font-weight: bolder;
+ 
+}
+@keyframes blinker{
+    50%{
+        opacity: 0;
+    }
+}
+header{
+    overflow: hidden;
+    border-bottom: red;
+    overflow: hidden;
+}

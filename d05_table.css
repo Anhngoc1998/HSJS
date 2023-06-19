@@ -1,0 +1,27 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2{
+    color: red;
+}
+table{
+    border: groove 5px lightcoral;
+    padding: 10px;
+}
+caption{
+    font-weight: bolder;
+    color: green;
+    font-size: 1.3em;
+}
+th{
+    color: coral;
+}
+td{
+    padding:3px 10px;
+}
+tbody>tr:nth-child(odd){
+    background-color: wheat;
+}
+tbody tr:hover{
+    background-color: lightblue;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <h2> Javascript String Object</h2>
+    <hr>
+    <div>
+        <label for="">intput Name</label>
+        <input type="text" name="fullName" id="fullName" value="ha the doanh">
+    </div>
+    <hr>
+
+    <div>
+        <input type="button" value="TEST" name="btnTEST" id="btnTEST">
+    </div>
+
+    <div id="result"></div>
+    <script>
+        //lập trình sự kiện click cho button
+        document.getElementById("btnTEST").onclick = function () {
+            // lấy dữ liệu trong text
+            let fname = new String(document.getElementById("fullName").value);
+            // tạo mảng a[] chứa kết quả xử lý chuỗi fname
+            let a = [];
+            //lưu kết quả vào mảng a[]
+            a.push(`${fname}`);
+            // xuất kết quả mảng a[] ra khối result
+            document.getElementById("result").innerHTML = a.join("<br>");
+        }
+    </script>
+</body>

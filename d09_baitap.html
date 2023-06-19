@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+    <link rel="stylesheet" href="CSS/form.css">
+</head>
+<body>
+    <h2>Javascript Parameterized Function </h2>
+    <hr>
+    <div>
+        <label for="">input x</label>
+        <input type="number" name="numberX" id="numberX" value="10">
+    </div>
+    
+    <div>
+        <label for="">input y</label>
+        <input type="number" name="numberY" id="numberY" value="34">
+    </div>
+    
+    <div>
+        <input type="button" value="CASIO" id="btnCASIO">
+    </div>
+    <hr>
+    <p id="result"></p>
+
+</body>
+<script>
+    //lập trình hàm casio, tính và trả về kết quả của phép toán + - * /, trên 2 số x và y
+    function casio(x, y, op) {
+        switch (op) {
+            case '+': return x + y; break;
+            case '-': return x - y; break;
+            case '*': return x * y; break;
+            case '/': return x / y; break;
+        }
+        return 'N/A';
+    }
+    
+    // lâpj trình hàm calc(), xử lý sự kiện click trên botton có nhan value=[CASIO ], id=[btnCASIO]
+    document.getElementById("btnCASIO").onclick = function(){
+        //lấy giá trị của x : đổi thành số nguyên, hàm đổi : parseINT
+        let n1 = parseInt( document.getElementById("numberX").value );
+        //lấy giá trị của y đổi thành số nguyên, hàm đổi : parseINT
+        let n2 = parseInt( document.getElementById("numberY").value );
+        //tạo mảng a chứa các kết quả của các phép toán + - * /
+        let a = [];
+        let kq = 0;
+
+        kq = casio(n1, n2, '+');
+        a.push(`${n1} + ${n2} = ${kq}`);
+
+        kq= casio(n1,n2,'-');
+        a.push(`${n1} - ${n2} = ${kq}`);
+
+        kq= casio(n1,n2,'*');
+        a.push(`${n1} * ${n2} = ${kq}`);
+        // XUẤT NỘI DUNG MẢNG a[] vo paragraph
+        document.getElementById("result").innerHTML = a.join("<br>");
+    }
+</script>
+
+</html>

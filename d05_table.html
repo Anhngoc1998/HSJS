@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+
+<body>
+    <h2> tabble HTML demo </h2>
+    <hr>
+    <!--tạo 1 bảng có 4 dòng, 5 cột cú pháp : table>tr*4>td*5 -->
+    <table border="1">
+        <caption>Danh sach sinh vien </caption>
+        <thead>
+            <tr>
+                <th> stt </th>
+                <th> ho ten </th>
+                <th> gioi tinh </th>
+                <th> email </th>
+                <th> so dien thoai </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ha Tan Doanh</td>
+                <td>nam</td>
+                <td>doanh@fpt.edu.vn</td>
+                <td style="text-align: center;">113</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nguen Hung</td>
+                <td>nam</td>
+                <td>hung@fpt.edu.vn</td>
+                <td style="text-align: center;">112</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Thi Nhung</td>
+                <td>nu</td>
+                <td>nhung@fpt.edu.vn</td>
+                <td style="text-align: center;">111</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" rowspan="2" style="text-align: center;">tong ket</td>
+                <td colspan="3" >so sinh vien nu: 1</td>
+            </tr>
+            <tr>
+                <td colspan="3">so sinh vien nam:2</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

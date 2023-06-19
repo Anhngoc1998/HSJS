@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/form.css">
+    <style>
+        .banner{
+            color: blue;
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+    <form id="formSTUDENT"  name="formSTUDENT">
+        <div class="banner">Student Information</div>
+        <hr>
+        <div>
+            <label for="">name</label>
+            <input type="text" id="fname" name="fname" value="nameas" required pattern="[a-z A-Z]{6,30}">
+        </div>
+        <div>
+            <label for="">gender</label>
+            <input type="radio" name="gender" checked value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+        </div>
+        <div>
+            <label for="">addess</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="">email</label>
+            <input type="text"  name="email"    id="email"   pattern=" [a-zA-Z0-9]{3}@[a-zA-Z0-9]{4,30}">
+        </div>
+        <div>
+            <label for="">phone</label>
+            <input type="text" id="phone"   name="phone"  value="123-123456"   required pattern="\d{3}-\d{5,8}">
+        </div>
+        <div>
+            <label for="">Qualication</label>
+            <select name="country" id="country" required>
+                <option value="sai-gon">Bachelor degree</option>
+                <option value="ha-noi">Master</option>
+                <option value="hue" selected>PhD</option>
+                <option value="phan-thiet">None</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Submit</button><button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+<script>
+    document.getElementById("formSTUDENT").onsubmit = function (e) {
+        e.preventDefault();
+
+        let a = ["Informatiom Summary"];
+
+        let fname = document.getElementById("fname").value;
+        a.push(`- full name: ${fname}`);
+        
+        alert(a.join("\n"));
+    }
+</script>
+
+</html>
